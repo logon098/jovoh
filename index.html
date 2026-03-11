@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Young Filmmakers | The Last Frontier</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">🎬</span>
+                    <span class="font-bold text-xl text-purple-700">Young Filmmakers</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                    <a href="#team" class="text-gray-700 hover:text-purple-600 transition">Team</a>
+                    <a href="#idea" class="text-gray-700 hover:text-purple-600 transition">Film Idea</a>
+                    <a href="#poster" class="text-gray-700 hover:text-purple-600 transition">Poster</a>
+                    <a href="#cast" class="text-gray-700 hover:text-purple-600 transition">Cast</a>
+                    <a href="#scene" class="text-gray-700 hover:text-purple-600 transition">Scene</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+                <a href="#team" class="block py-2 text-gray-700 hover:text-purple-600">Team</a>
+                <a href="#idea" class="block py-2 text-gray-700 hover:text-purple-600">Film Idea</a>
+                <a href="#poster" class="block py-2 text-gray-700 hover:text-purple-600">Poster</a>
+                <a href="#cast" class="block py-2 text-gray-700 hover:text-purple-600">Cast</a>
+                <a href="#scene" class="block py-2 text-gray-700 hover:text-purple-600">Scene</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- HOME SECTION -->
+        <section id="home" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl md:text-7xl font-bold text-purple-700 mb-4">YOUNG FILMMAKERS</h1>
+                    <h2 class="text-3xl md:text-5xl font-semibold text-gray-700 mb-6">COMPETITION 2025</h2>
+                    <div class="w-24 h-1 bg-purple-500 mx-auto mb-8"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Film Project</h3>
+                        <p class="text-4xl font-bold text-gray-800 mb-6">"THE LAST FRONTIER"</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-600 text-xl">🎭</span>
+                                <span class="text-gray-600">Genre: Sci-Fi / Thriller</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-600 text-xl">⏱️</span>
+                                <span class="text-gray-600">Duration: 15 minutes</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-600 text-xl">🌍</span>
+                                <span class="text-gray-600">Language: English (with subtitles)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Competition Prize -->
+                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">🏆 GRAND PRIZE</h3>
+                        <p class="text-xl mb-4">A day at film school!</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">✓ Professional camera training</li>
+                            <li class="flex items-center gap-2">✓ Special effects workshop</li>
+                            <li class="flex items-center gap-2">✓ Meet professional filmmakers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section id="team" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold text-center text-purple-700 mb-4">OUR TEAM</h2>
+                <p class="text-center text-gray-600 mb-12">Meet the creative minds behind "The Last Frontier"</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Team Member 1 - Lider -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden team-card border-2 border-yellow-400 transform hover:scale-105 transition">
+                        <div class="h-48 bg-gradient-to-r from-yellow-400 to-yellow-600 flex items-center justify-center relative">
+                            <span class="absolute top-2 right-2 bg-yellow-800 text-white text-xs px-2 py-1 rounded-full">LIDER</span>
+                            <span class="text-7xl text-white">👨‍🎬</span>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Kurikmasov Diyorbek</h3>
+                            <p class="text-yellow-600 font-semibold mb-3">Team Leader & Director</p>
+                            <p class="text-gray-600 text-sm">Leading the team, managing the creative vision and directing the film</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden team-card hover:scale-105 transition">
+                        <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                            <span class="text-7xl text-white">👨‍🎨</span>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Aybekov Asadbek</h3>
+                            <p class="text-blue-600 font-semibold mb-3">Writer & Story Creator</p>
+                            <p class="text-gray-600 text-sm">Created the film story, wrote the script and dialogue</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden team-card hover:scale-105 transition">
+                        <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                            <span class="text-7xl text-white">👨‍🎥</span>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Mahamadjonov Saloxiddin</h3>
+                            <p class="text-green-600 font-semibold mb-3">Cinematographer</p>
+                            <p class="text-gray-600 text-sm">Responsible for camera work, lighting and visual style</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden team-card hover:scale-105 transition">
+                        <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
+                            <span class="text-7xl text-white">🎬</span>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Jalolov Davron</h3>
+                            <p class="text-purple-600 font-semibold mb-3">Editor & Designer</p>
+                            <p class="text-gray-600 text-sm">Editing the film, creating poster and visual effects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Roles Card -->
+                <div class="mt-12 bg-gray-100 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-center mb-4">🎯 Team Responsibilities</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-2">
+                            <span class="text-yellow-600 font-bold">•</span>
+                            <span><span class="font-semibold">Diyorbek (Lider):</span> Overall coordination, presenting to class</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span><span class="font-semibold">Asadbek:</span> Brainstorming, writing scene description</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-green-600 font-bold">•</span>
+                            <span><span class="font-semibold">Saloxiddin:</span> Visual ideas, camera planning</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-purple-600 font-bold">•</span>
+                            <span><span class="font-semibold">Davron:</span> Poster design, presentation slides</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILM IDEA SECTION -->
+        <section id="idea" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold text-center text-purple-700 mb-12">OUR FILM IDEA</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Brainstorming Process -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center mr-2">🧠</span>
+                            Brainstorming Process
+                        </h3>
+                        <p class="text-gray-600 mb-4">We used <span class="font-bold text-purple-600">Mind Mapping</span> technique:</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="text-green-500">✓</span>
+                                <span>Diyorbek suggested sci-fi genre</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-green-500">✓</span>
+                                <span>Asadbek created the story</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-green-500">✓</span>
+                                <span>Saloxiddin planned visual style</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-green-500">✓</span>
+                                <span>Davron designed the poster</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Ideas Table -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center mr-2">💡</span>
+                            All Ideas We Considered
+                        </h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="p-2 text-left">Genre</th>
+                                        <th class="p-2 text-left">Title Idea</th>
+                                        <th class="p-2 text-left">Suggested by</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="p-2 border-b">🎬 Sci-Fi</td><td class="p-2 border-b font-bold">The Last Frontier</td><td class="p-2 border-b">Diyorbek</td></tr>
+                                    <tr><td class="p-2 border-b">🎭 Drama</td><td class="p-2 border-b">Broken Dreams</td><td class="p-2 border-b">Asadbek</td></tr>
+                                    <tr><td class="p-2 border-b">🗺️ Adventure</td><td class="p-2 border-b">Lost in Time</td><td class="p-2 border-b">Saloxiddin</td></tr>
+                                    <tr><td class="p-2">🔍 Mystery</td><td class="p-2">The Fog</td><td class="p-2">Davron</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 p-3 bg-green-100 rounded-lg">
+                            <p class="font-bold text-green-800">🏆 WINNING IDEA: "THE LAST FRONTIER" (Sci-Fi/Thriller)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POSTER SECTION -->
+        <section id="poster" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold text-center text-purple-700 mb-4">OUR POSTER</h2>
+                <p class="text-center text-gray-600 mb-8">Designed by Jalolov Davron</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Poster Image -->
+                    <div class="bg-black rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+                        <div class="h-96 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1547234935-80c7145ec969?fit=crop&w=800&q=80');">
+                            <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center">
+                                <h1 class="text-white text-5xl font-bold text-center px-4">THE LAST<br>FRONTIER</h1>
+                                <p class="text-gray-300 mt-4 text-lg">A Film by Kurikmasov Diyorbek</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poster Details -->
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-xl font-bold text-purple-700 mb-3">🎨 Poster Design by Davron</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Dark, mysterious atmosphere</li>
+                                <li>• Fog and ruins background</li>
+                                <li>• Bold white typography</li>
+                                <li>• Director's name featured</li>
+                                <li>• Created in Photoshop</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-6 rounded-xl border border-purple-200">
+                            <h3 class="text-lg font-semibold mb-2">📝 Poster Description</h3>
+                            <p class="text-gray-700">The poster shows a ruined city covered in mysterious fog. The title "THE LAST FRONTIER" appears in bold white letters against the dark sky, creating a sense of mystery and adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAST SECTION -->
+        <section id="cast" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold text-center text-purple-700 mb-12">MAIN CAST</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Actor 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center">
+                            <span class="text-6xl text-white">👤</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">John Dawson</h3>
+                            <p class="text-purple-600 font-semibold mb-2">as Alex Rider</p>
+                            <p class="text-gray-600 text-sm">The survivor who must cross the mist to find hope</p>
+                        </div>
+                    </div>
+
+                    <!-- Actor 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center">
+                            <span class="text-6xl text-white">👩</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">Mia Chen</h3>
+                            <p class="text-purple-600 font-semibold mb-2">as Dr. Elena Vance</p>
+                            <p class="text-gray-600 text-sm">Scientist searching for answers</p>
+                        </div>
+                    </div>
+
+                    <!-- Actor 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-400 flex items-center justify-center">
+                            <span class="text-6xl text-white">🎙️</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">Samir Gupta</h3>
+                            <p class="text-purple-600 font-semibold mb-2">as The Voice</p>
+                            <p class="text-gray-600 text-sm">Mysterious radio signal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE SECTION -->
+        <section id="scene" class="min-h-screen flex items-center py-16">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold text-center text-purple-700 mb-4">KEY SCENE</h2>
+                <p class="text-center text-gray-600 mb-8">Written by Aybekov Asadbek</p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Scene Image -->
+                    <div class="rounded-xl overflow-hidden shadow-xl h-80">
+                        <img src="https://i.ytimg.com/vi/p48W-2U5jgE/maxresdefault.jpg" alt="Foggy bridge" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Scene Description -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-purple-700 mb-4">"The Wall of Mist"</h3>
+                        
+                        <p class="text-gray-700 leading-relaxed">
+                            <span class="font-bold">Scene by Asadbek:</span> Alex stands on a crumbling highway overpass, 
+                            the city below swallowed by thick fog. He holds a faded photograph, looking back one last time 
+                            before stepping into the unknown. The wind carries a distant radio signal...
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">🌫️ Fog effect</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">🌉 Bridge location</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">📡 Radio sound</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTION DETAILS -->
+        <section class="py-16">
+            <h2 class="text-4xl font-bold text-center text-purple-700 mb-12">PRODUCTION DETAILS</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <p class="text-3xl mb-2">🎥</p>
+                    <h3 class="font-bold mb-2">Equipment</h3>
+                    <p class="text-sm text-gray-600">DSLR, Tripod, Drone, LED Lights</p>
+                    <p class="text-xs text-gray-400 mt-2">(Saloxiddin's planning)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <p class="text-3xl mb-2">📍</p>
+                    <h3 class="font-bold mb-2">Locations</h3>
+                    <p class="text-sm text-gray-600">Abandoned factory, Bridge</p>
+                    <p class="text-xs text-gray-400 mt-2">(Scouted by Diyorbek)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <p class="text-3xl mb-2">✨</p>
+                    <h3 class="font-bold mb-2">Special Effects</h3>
+                    <p class="text-sm text-gray-600">Fog, Radio effects, Color grading</p>
+                    <p class="text-xs text-gray-400 mt-2">(Davron's editing)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <p class="text-3xl mb-2">💰</p>
+                    <h3 class="font-bold mb-2">Budget</h3>
+                    <p class="text-sm text-gray-600">Estimated $280</p>
+                    <p class="text-xs text-gray-400 mt-2">(Team planning)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section class="py-16">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">Ready for the Competition!</h2>
+                <p class="text-xl mb-6">Team: Kurikmasov Diyorbek (Lider), Aybekov Asadbek, Mahamadjonov Saloxiddin, Jalolov Davron</p>
+                <p class="text-2xl font-semibold italic mb-6">"Some borders are meant to be crossed."</p>
+                <p class="text-lg">Film: THE LAST FRONTIER | Genre: Sci-Fi/Thriller | Duration: 15 min</p>
+                <p class="mt-8 text-sm opacity-75">© 2025 Young Filmmakers Competition - Group Presentation</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>Young Filmmakers Competition 2025</p>
+            <p class="text-sm text-gray-400 mt-2">The Last Frontier - A Film by Kurikmasov Diyorbek, Aybekov Asadbek, Mahamadjonov Saloxiddin, Jalolov Davron</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Highlight active menu item
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-purple-600');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-purple-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
